@@ -11,9 +11,11 @@ import "./styles.css";
 
 // import required modules
 import { Block } from "@/components/block/Block";
+import { Projects } from "@/components/projects/projects";
 import { Refresh } from "@/components/refresh/Refresh";
 import { useState } from "react";
 import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
+import style from "./page.module.scss";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -30,7 +32,10 @@ export default function App() {
         className="mySwiper">
         <Refresh onClick={() => setCount(count + 1)} />
         <SwiperSlide>
-          <Block key={count} />
+          <div className={style.src}>
+            <Block key={count} />
+            <Projects />
+          </div>
         </SwiperSlide>
       </Swiper>
     </>
