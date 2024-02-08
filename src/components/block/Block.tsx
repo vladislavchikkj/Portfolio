@@ -13,57 +13,57 @@ export const Block = () => {
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__1}>
           <div className={style.block_name}>JS</div>
         </motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__2}>
           <div className={style.block_name}>TS</div>
         </motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__3}></motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__4}></motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__5}>
           Hi. <br /> My name is Vlad. <br /> I’m a frontend developer.
         </motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__6}>
           {"<Menu/>"}
         </motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__7}></motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__8}>
           {"<Contacts/>"}
         </motion.div>
         <motion.div
           drag
           dragConstraints={constraintsRef}
-          whileDrag={{ scale: 1.05 }}
+          whileDrag={{ scale: 1.01 }}
           className={style.block__9}>
           download .CV
         </motion.div>

@@ -1,6 +1,10 @@
 .src {
-  display: flex;
-  justify-content: space-between;
-  width: 200vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 400vw;
   background: linear-gradient(180deg, #292929 0%, rgb(22, 22, 22) 100%);
+}
+.scr1 {
+  position: relative !important;
 }

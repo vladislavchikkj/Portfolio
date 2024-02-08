@@ -10,15 +10,19 @@ import "./globals.scss";
 import "./styles.css";
 
 // import required modules
+import { About } from "@/components/about/about";
 import { Block } from "@/components/block/Block";
 import { Projects } from "@/components/projects/projects";
 import { Refresh } from "@/components/refresh/Refresh";
+import { Refresh1 } from "@/components/refresh/Refresh1";
 import { useState } from "react";
 import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
 import style from "./page.module.scss";
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const [count1, setCount1] = useState(0);
+
   return (
     <>
       <Swiper
@@ -27,14 +31,20 @@ export default function App() {
         freeMode={true}
         scrollbar={true}
         mousewheel={true}
+        history={true}
+        keyboard={true}
         simulateTouch={false}
         modules={[FreeMode, Scrollbar, Mousewheel]}
         className="mySwiper">
-        <Refresh onClick={() => setCount(count + 1)} />
         <SwiperSlide>
+          <Refresh onClick={() => setCount(count + 1)} />
           <div className={style.src}>
             <Block key={count} />
-            <Projects />
+            <div className={style.scr1}>
+              <Projects key={count1} />
+              <Refresh1 onClick={() => setCount1(count1 + 1)} />
+            </div>
+            <About />
           </div>
         </SwiperSlide>
       </Swiper>
