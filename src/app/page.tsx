@@ -12,6 +12,7 @@ import "./styles.css";
 // import required modules
 import { About } from "@/components/about/about";
 import { Block } from "@/components/block/Block";
+import { Contacts } from "@/components/contacts/contacts";
 import { Projects } from "@/components/projects/projects";
 import { Refresh } from "@/components/refresh/Refresh";
 import { Refresh1 } from "@/components/refresh/Refresh1";
@@ -45,6 +46,7 @@ export default function App() {
               <Refresh1 onClick={() => setCount1(count1 + 1)} />
             </div>
             <About />
+            <Contacts />
           </div>
         </SwiperSlide>
       </Swiper>

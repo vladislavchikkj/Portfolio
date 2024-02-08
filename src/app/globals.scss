@@ -24,3 +24,25 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.paints {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glowable-text {
+  color: black;
+  border: none !important;
+}
+
+[glow] .glowable-text {
+  color: var(--glow-color);
+}
+
+.glow {
+  border: none !important;
+}
+.glow div {
+  border: none !important;
+}
