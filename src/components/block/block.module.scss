@@ -1,5 +1,4 @@
 .block_container .drag_area {
-  background: linear-gradient(180deg, #292929 0%, rgb(22, 22, 22) 100%);
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -71,6 +70,9 @@
   font-size: 7vh;
   padding: 20px;
   box-sizing: border-box;
+  div {
+    border: none !important;
+  }
 }
 .block__6 {
   grid-column-start: 3;
@@ -83,6 +85,14 @@
   justify-content: center;
   align-items: center;
   font-size: 4vh;
+  z-index: 1;
+  p {
+    cursor: pointer !important;
+    transition: all 0.5s;
+    &:hover {
+      color: #dd94ff;
+    }
+  }
 }
 .block__7 {
   grid-column-start: 4;
@@ -107,6 +117,13 @@
   justify-content: center;
   align-items: center;
   font-size: 4vh;
+  p {
+    cursor: pointer !important;
+    transition: all 0.5s;
+    &:hover {
+      color: #dd94ff;
+    }
+  }
 }
 .block__9 {
   grid-column-start: 6;
@@ -121,6 +138,13 @@
   font-size: 4vh;
   box-sizing: border-box;
   z-index: 2;
+  p {
+    cursor: pointer !important;
+    transition: all 0.5s;
+    &:hover {
+      color: #dd94ff;
+    }
+  }
 }
 
 .block_name {
@@ -154,4 +178,10 @@
   top: 40px;
   left: 40px;
   cursor: text !important;
+}
+
+@keyframes printed-text {
+  from {
+    width: 0%;
+  }
 }

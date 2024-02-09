@@ -1,3 +1,4 @@
+import { Glow, GlowCapture } from "@codaworks/react-glow";
 import style from "./about.module.scss";
 
 export const About = () => {
@@ -5,15 +6,20 @@ export const About = () => {
     <div className={style.content}>
       <div className={style.info}>
         <div className={style.title}>{"<About me/>"}</div>
-        <div className={style.text}>
-          I’m a front-end web developer. I work with agencies across the globe
-          to create high performance & rich interactive websites that work
-          across all platforms & devices. <br /> <br /> With a strong emphasis
-          on `Progressive Enhancement`, I look for creative ways to push the
-          boundaries of website front-end code without compromising on browser
-          support and performance. <br /> <br /> In a quest for always keeping
-          myself updated, I read books and attend conferences & meetups.
-        </div>
+        <GlowCapture>
+          <Glow color="#dd94ff">
+            <div className={`${style.text} glowable-text`}>
+              I’m a front-end web developer. I work with agencies across the
+              globe to create high performance & rich interactive websites that
+              work across all platforms & devices. <br /> <br /> With a strong
+              emphasis on `Progressive Enhancement`, I look for creative ways to
+              push the boundaries of website front-end code without compromising
+              on browser support and performance. <br /> <br /> In a quest for
+              always keeping myself updated, I read books and attend conferences
+              & meetups.
+            </div>
+          </Glow>
+        </GlowCapture>
       </div>
       <div className={style.stack}>
         <div className={style.title}>{"<technology stack/>"}</div>
