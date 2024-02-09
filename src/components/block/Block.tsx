@@ -9,11 +9,45 @@ export const Block = () => {
   const constraintsRef = useRef(null);
 
   const el = React.useRef(null);
+  const elCode = React.useRef(null);
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["Hi. <br /> My name is Vlad. <br /> I’m a frontend developer."],
       typeSpeed: 50,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
+  React.useEffect(() => {
+    const typed = new Typed(elCode.current, {
+      strings: [
+        `const arr = [10, 12, 15, 21];
+      <br />
+      for (var i = 0; i < arr.length; i++) { <br />
+      &nbsp;&nbsp;// pass in the variable i so that each function <br />
+      &nbsp;&nbsp;// has access to the correct index   
+      <br />
+      &nbsp;&nbsp;setTimeout(function(i_local) {
+      <br />
+      &nbsp;&nbsp;&nbsp;return function() { 
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      console.log('The index of this number is: ' +
+      <br />
+      i_local);
+      <br />
+      &nbsp; &nbsp;&nbsp;{
+      <br />
+      &nbsp; }(i), 3000);
+      <br />
+      }`,
+      ],
+      typeSpeed: 5,
     });
 
     return () => {
@@ -79,6 +113,13 @@ export const Block = () => {
           whileDrag={{ scale: 1.01 }}
           className={style.block__4}></motion.div>
         <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.1,
+            delay: 0.1,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
           drag
           dragConstraints={constraintsRef}
           whileDrag={{ scale: 1.01 }}
@@ -150,26 +191,7 @@ export const Block = () => {
             ease: [0, 0.71, 0.2, 1.01],
           }}
           className={style.code}>
-          {"const arr = [10, 12, 15, 21];"}
-          <br />
-          {"for (var i = 0; i < arr.length; i++) {"} <br />
-          &nbsp;&nbsp;{"// pass in the variable i so that each function"} <br />
-          &nbsp;&nbsp;{"// has access to the correct index   "}
-          <br />
-          &nbsp;&nbsp;{"setTimeout(function(i_local) {"}
-          <br />
-          &nbsp;&nbsp;&nbsp;{"return function() { "}
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          {"console.log('The index of this number is: ' +"}
-          <br />
-          {"i_local);"}
-          <br />
-          &nbsp; &nbsp;&nbsp;{"}"}
-          <br />
-          &nbsp;{" }(i), 3000);"}
-          <br />
-          {"}"}
+          <span ref={elCode} />
         </motion.div>
       </div>
     </div>
