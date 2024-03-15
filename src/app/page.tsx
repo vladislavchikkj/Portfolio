@@ -14,22 +14,36 @@ import "./styles.css";
 import { About } from "@/components/about/about";
 import { Block } from "@/components/block/Block";
 import { Contacts } from "@/components/contacts/contacts";
+import Loader from "@/components/loader/loader";
 import { Projects } from "@/components/projects/projects";
 import { Refresh } from "@/components/refresh/Refresh";
 import { Refresh1 } from "@/components/refresh/Refresh1";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mousewheel, Pagination } from "swiper/modules";
 
 export default function App() {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);
+  const [isLoaling, setIsLoaling] = useState(true);
 
-  return (
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoaling(false);
+      }, 2000);
+    };
+    fakeDataFetch();
+  }, []);
+
+  return isLoaling ? (
+    <Loader />
+  ) : (
     <>
+      <div className={style.start}></div>
       <Swiper
         direction={"horizontal"}
         simulateTouch={false}
-        spaceBetween={10}
+        spaceBetween={1}
         mousewheel={true}
         pagination={{
           clickable: true,

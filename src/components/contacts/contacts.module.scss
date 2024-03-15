@@ -33,6 +33,9 @@
   font-family: "M PLUS 1 Code", monospace;
   font-size: 3vh;
   cursor: pointer;
+  a {
+    text-decoration: none;
+  }
 }
 .last {
   transform: translate(30px, 30px);
