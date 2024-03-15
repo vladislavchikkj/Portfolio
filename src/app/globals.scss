@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap");
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #292929 0%, rgb(22, 22, 22) 100%);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  height: auto;
+  width: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.paints {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glowable-text {
+  color: black;
+  border: none !important;
+}
+
+[glow] .glowable-text {
+  color: var(--glow-color);
+}
+
+.glow {
+  border: none !important;
+}
+.glow div {
+  border: none !important;
+}
+
+.swiper-scrollbar-drag {
+  background: #b3b3b3 !important;
+}
+.box {
+  width: 20px;
+  height: 20px;
+  background: white;
+}
