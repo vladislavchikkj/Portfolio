@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./globals.scss";
 import style from "./page.module.scss";
@@ -53,7 +54,7 @@ export default function App() {
         <SwiperSlide>
           <Refresh onClick={() => setCount(count + 1)} />
           <Block key={count} />
-          <div className={style.scroll}>scroll for move</div>
+          <div className={style.scroll}>scroll for move |</div>
           <div className={style.reset}>tap here for reset |</div>
         </SwiperSlide>
         <SwiperSlide>
