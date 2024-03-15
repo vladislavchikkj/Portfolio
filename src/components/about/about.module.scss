@@ -14,6 +14,7 @@
   height: 75vh;
   padding: 30px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .title {
@@ -35,7 +36,7 @@
 .stack {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   .title {
     color: white;
@@ -48,14 +49,19 @@
   font-family: "M PLUS 1 Code", monospace;
   font-size: 2.1vh;
   color: white;
-  width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .blocks div {
   border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
+  &:hover {
+    background: #ffffff;
+    color: black;
+  }
 }
 .block_1 {
   grid-column-start: 1;

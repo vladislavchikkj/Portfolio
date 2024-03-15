@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 import style from "./projects.module.scss";
 
@@ -45,7 +46,9 @@ export const Projects = () => {
             dragConstraints={constraintsRef}
             whileDrag={{ scale: 1.01 }}
             className={`${style.block} ${style.first}`}>
-            <div className={style.block_content}>desk-culture.com</div>
+            <Link href={"https://desk-culture.com"} className={style.link}>
+              <div className={style.block_content}>desk-culture.com</div>
+            </Link>
           </motion.div>
           <motion.div
             drag

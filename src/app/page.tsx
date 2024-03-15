@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import "./globals.scss";
+import style from "./page.module.scss";
 import "./styles.css";
 
 // import required modules
@@ -17,8 +18,7 @@ import { Projects } from "@/components/projects/projects";
 import { Refresh } from "@/components/refresh/Refresh";
 import { Refresh1 } from "@/components/refresh/Refresh1";
 import { useState } from "react";
-import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
-import style from "./page.module.scss";
+import { Mousewheel, Pagination } from "swiper/modules";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -28,26 +28,29 @@ export default function App() {
     <>
       <Swiper
         direction={"horizontal"}
-        slidesPerView={"auto"}
-        freeMode={true}
-        scrollbar={true}
-        mousewheel={true}
-        history={true}
-        keyboard={true}
         simulateTouch={false}
-        modules={[FreeMode, Scrollbar, Mousewheel]}
+        spaceBetween={10}
+        mousewheel={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Mousewheel, Pagination]}
         className="mySwiper">
         <SwiperSlide>
           <Refresh onClick={() => setCount(count + 1)} />
-          <div className={style.src}>
-            <Block key={count} />
-            <div className={style.scr1}>
-              <Projects key={count1} />
-              <Refresh1 onClick={() => setCount1(count1 + 1)} />
-            </div>
-            <About />
-            <Contacts />
+          <Block key={count} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={style.scr1}>
+            <Projects key={count1} />
+            <Refresh1 onClick={() => setCount1(count1 + 1)} />
           </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <About />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Contacts />
         </SwiperSlide>
       </Swiper>
     </>
