@@ -7,3 +7,12 @@
 .scr1 {
   position: relative !important;
 }
+.scroll {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 2vh !important;
+  color: rgb(129, 129, 129);
+  z-index: -1;
+}

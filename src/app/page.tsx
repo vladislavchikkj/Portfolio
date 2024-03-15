@@ -39,6 +39,7 @@ export default function App() {
         <SwiperSlide>
           <Refresh onClick={() => setCount(count + 1)} />
           <Block key={count} />
+          <div className={style.scroll}>scroll for move</div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={style.scr1}>
